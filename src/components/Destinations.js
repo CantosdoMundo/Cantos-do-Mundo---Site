@@ -70,12 +70,13 @@ function DestinationCard({ dest, index }) {
 
     useEffect(() => {
         if (videoRef.current) {
-            // Force play on mobile (width < 768px) or if visible
-            const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-            if (isVisible || isMobile) {
-                videoRef.current.play().catch((error) => {
-                    console.log("Autoplay prevented:", error);
-                });
+            if (isVisible) {
+                const playPromise = videoRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch((error) => {
+                        console.log("Autoplay prevented:", error);
+                    });
+                }
             } else {
                 videoRef.current.pause();
             }
@@ -98,13 +99,13 @@ function DestinationCard({ dest, index }) {
             className="group cursor-pointer"
         >
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
-                {/* Background Video (lazy loaded) */}
-                {dest.videos && (isVisible || (typeof window !== 'undefined' && window.innerWidth < 768)) ? (
+                {/* Background Video (always mounted for instant playback) */}
+                {dest.videos ? (
                     <div className="absolute inset-0">
                         <video
                             key={currentVideoIndex}
                             ref={videoRef}
-                            autoPlay
+                            preload="auto"
                             muted
                             playsInline
                             webkit-playsinline="true"
@@ -113,10 +114,8 @@ function DestinationCard({ dest, index }) {
                         >
                             <source src={dest.videos[currentVideoIndex]} type="video/mp4" />
                         </video>
-                    </div>
-                ) : dest.videos ? (
-                    <div className="absolute inset-0 bg-gradient-to-br from-canto-da-terra to-terracota flex items-center justify-center">
-                        <div className="w-16 h-16 border-4 border-brisa/30 border-t-brisa rounded-full animate-spin"></div>
+                        {/* Loading State / Fallback (visible only if video hasn't loaded, though preload helps) */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-canto-da-terra to-terracota -z-10" />
                     </div>
                 ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-horizonte to-terracota" />
