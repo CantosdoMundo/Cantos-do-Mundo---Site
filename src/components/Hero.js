@@ -21,7 +21,7 @@ export default function Hero() {
                 webkit-playsinline="true"
                 className="absolute inset-0 w-full h-full object-contain md:object-cover object-center"
             >
-                <source src="/Vídeo Institucional/CANTOS DO MUNDO - FINAL.mp4" type="video/mp4" />
+                <source src="/Video Institucional/CANTOS DO MUNDO - FINAL.mp4" type="video/mp4" />
             </video>
 
             {/* Decorative Circle */}

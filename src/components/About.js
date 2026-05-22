@@ -79,7 +79,7 @@ export default function About() {
                             muted
                             onPlay={() => setIsPlaying(true)}
                         >
-                            <source src="/Vídeo Quem somos/Historia Cantos do Mundo - Reels.mp4" type="video/mp4" />
+                            <source src="/Video Quem somos/Historia Cantos do Mundo - Reels.mp4" type="video/mp4" />
                             Seu navegador não suporta vídeos.
                         </video>
                     </div>

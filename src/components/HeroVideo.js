@@ -11,7 +11,7 @@ export default function HeroVideo() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover scale-105"
             >
-                <source src="/Vídeo Institucional/CANTOS DO MUNDO - FINAL.mp4" type="video/mp4" />
+                <source src="/Video Institucional/CANTOS DO MUNDO - FINAL.mp4" type="video/mp4" />
             </video>
 
             {/* Very subtle dark overlay just for depth */}

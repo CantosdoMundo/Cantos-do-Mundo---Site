@@ -13,8 +13,8 @@ const destinations = [
         subtitle: "O silêncio das alturas",
         description: "Montanhas que impõem respeito, ar limpo, o branco que acalma. Para quem precisa se reencontrar longe do barulho.",
         videos: [
-            "/Vídeo Patagonia/6155783_Mountains Snow Woman Back Shot_By_Alejandro_Campollo_Artlist_HD.mp4",
-            "/Vídeo Patagonia/6155798_Mountains Argentina Woman Standing_By_Alejandro_Campollo_Artlist_HD.mp4"
+            "/Video Patagonia/6155783_Mountains Snow Woman Back Shot_By_Alejandro_Campollo_Artlist_HD.mp4",
+            "/Video Patagonia/6155798_Mountains Argentina Woman Standing_By_Alejandro_Campollo_Artlist_HD.mp4"
         ],
     },
     {
@@ -23,8 +23,8 @@ const destinations = [
         subtitle: "O tempo que desacelera",
         description: "Dias sem pressa, o som da água, o sol sem hora para acabar. O descanso de verdade, do jeito que você merece.",
         videos: [
-            "/Vídeo Toscana/6161871_Mare Countryside Woman Girl_By_Feelm_Artlist_HD.mp4",
-            "/Vídeo Toscana/716072_Tuscany Buildings Village Town_By_Cristian_Baitg_Schreiweis_Artlist_HD.mp4"
+            "/Video Toscana/6161871_Mare Countryside Woman Girl_By_Feelm_Artlist_HD.mp4",
+            "/Video Toscana/716072_Tuscany Buildings Village Town_By_Cristian_Baitg_Schreiweis_Artlist_HD.mp4"
         ],
     },
     {
@@ -33,8 +33,8 @@ const destinations = [
         subtitle: "Histórias em cada esquina",
         description: "Arquitetura, sabores e ruas com memória. Para quem viaja com curiosidade e volta com histórias para contar.",
         videos: [
-            "/Vídeos Turquia/196818_City Drone Mosque Aerial_By_Timelab_Pro_Artlist_HD.mp4",
-            "/Vídeos Turquia/357447_Sightseeing Rock Formation Flight Balloon_By_Wind_Collective_Artlist_HD.mp4"
+            "/Videos Turquia/196818_City Drone Mosque Aerial_By_Timelab_Pro_Artlist_HD.mp4",
+            "/Videos Turquia/357447_Sightseeing Rock Formation Flight Balloon_By_Wind_Collective_Artlist_HD.mp4"
         ],
     },
 ];
