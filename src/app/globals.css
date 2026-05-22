@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* Brand Colors */
+  --color-canto-da-terra: #A75638;
+  --color-horizonte: #21668C;
+  --color-terracota: #BA694B;
+  --color-duna: #F4CD97;
+  --color-brisa: #FFF8F0;
+  --color-text-main: #2C2C2C;
+  --color-text-light: #FFF8F0;
+
+  /* Fonts */
+  --font-serif: Moisette, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, var(--font-inter), sans-serif;
+  --font-script: Parslay, cursive;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+}
+
+/* Custom Utilities */
+@utility window-shape {
+  border-radius: var(--radius-lg);
+}
+
+@utility bg-noise {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 100%;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+
+  @media (min-width: 1536px) {
+    max-width: 1600px;
+  }
+
+  /* Wider on 2XL */
+  @media (min-width: 1920px) {
+    max-width: 1800px;
+  }
+
+  /* Extra wide for 2K */
+}
+
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Moisette';
+  src: url('/fonts/Moisette-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Parslay';
+  src: url('/fonts/Parslay.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base Styles */
+body {
+  color: var(--color-text-main);
+  background-color: var(--color-brisa);
+  font-family: var(--font-sans);
+}

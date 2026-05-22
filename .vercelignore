@@ -1,0 +1,10 @@
+videos_original_backup
+public/videos_original_backup
+**/videos_original_backup
+.git
+ffmpeg
+node_modules
+.next
+out
+
+
