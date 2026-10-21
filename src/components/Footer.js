@@ -9,10 +9,10 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-4 lg:col-span-3 pt-2 md:pt-0">
                         <h3 className="font-serif text-xl md:text-2xl mb-4 md:mb-6 text-duna">Explorar</h3>
                         <ul className="space-y-3 font-sans text-brisa/90 text-sm md:text-base">
-                            <li><a href="#" className="hover:text-duna transition-colors">Início</a></li>
-                            <li><a href="#destinos" className="hover:text-duna transition-colors">Destinos</a></li>
-                            <li><a href="#sobre" className="hover:text-duna transition-colors">Sobre Nós</a></li>
-                            <li><a href="#depoimentos" className="hover:text-duna transition-colors">Depoimentos</a></li>
+                            <li><a href="/" className="hover:text-duna transition-colors">Início</a></li>
+                            <li><a href="/#destinos" className="hover:text-duna transition-colors">Destinos</a></li>
+                            <li><a href="/#sobre" className="hover:text-duna transition-colors">Sobre Nós</a></li>
+                            <li><a href="/#depoimentos" className="hover:text-duna transition-colors">Depoimentos</a></li>
                         </ul>
                     </div>
 

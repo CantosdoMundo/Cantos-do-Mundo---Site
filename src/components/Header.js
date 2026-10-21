@@ -24,6 +24,8 @@ export default function Header() {
         const element = document.querySelector(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            window.location.href = '/' + sectionId;
         }
     };
 
