@@ -191,8 +191,18 @@ export default async function DestinoPage({ params }) {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                                     <div className="absolute inset-0 p-8 flex flex-col justify-end">
                                         <h3 className="font-serif text-3xl text-brisa mb-3">{x.nome}</h3>
-                                        <p className="font-sans text-brisa/90 text-sm leading-relaxed">{x.texto}</p>
+                                        <p className="font-sans text-brisa/90 text-sm leading-relaxed mb-5">{x.texto}</p>
+                                        <span className="inline-block w-full border border-brisa/50 text-brisa font-sans font-medium py-3 px-6 rounded-full group-hover:bg-brisa group-hover:text-horizonte transition-all duration-300 text-center uppercase tracking-widest text-xs backdrop-blur-sm">
+                                            Quero viver isso
+                                        </span>
                                     </div>
+                                    <a
+                                        href={WHATSAPP}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`Falar com a Curadoria sobre ${x.nome}`}
+                                        className="absolute inset-0 z-20"
+                                    />
                                 </div>
                                 <div className="mt-2 px-2">
                                     <Credito c={x.foto.credito} />
