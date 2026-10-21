@@ -12,16 +12,20 @@ export const metadata = {
 export default function DestinosPage() {
     return (
         <main className="min-h-screen bg-brisa">
-            <Header />
-            <section className="bg-horizonte pt-44 pb-24 relative overflow-hidden">
-                <div className="absolute inset-0 pointer-events-none opacity-[0.06]">
-                    <img src="/images/map-bg.svg" alt="" className="h-full w-full object-cover" />
-                </div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
+            <Header lightLogo />
+            <section className="relative h-[72vh] min-h-[520px] w-full overflow-hidden bg-black">
+                <img
+                    src="/images/destinos/bariloche/destino.jpg"
+                    alt="Pôr do sol sobre montanhas nevadas na Patagônia"
+                    className="absolute inset-0 h-full w-full object-cover object-[50%_45%]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/55" />
+                <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end items-center text-center pb-20">
                     <span className="font-sans text-duna text-sm uppercase tracking-[0.25em]">Guias da Curadoria</span>
-                    <h1 className="font-serif text-brisa text-5xl md:text-6xl mt-3 max-w-3xl mx-auto">
+                    <h1 className="font-serif text-brisa text-5xl md:text-6xl mt-3 max-w-3xl">
                         Para onde o seu próximo canto do mundo vai te levar?
                     </h1>
+                    <p className="font-script text-duna text-3xl mt-5">Escolha um destino e viaje antes de ir.</p>
                 </div>
             </section>
             <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">

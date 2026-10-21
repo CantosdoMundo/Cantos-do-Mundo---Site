@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+import { destinos as guias } from "@/content/destinos";
 
 // Experiências em vez de destinos fixos: a curadoria não desatualiza,
 // e o site nunca promete um destino específico que a agência não esteja vendendo.
@@ -121,6 +122,15 @@ function DestinationCard({ dest, index }) {
                     <div className="absolute inset-0 bg-gradient-to-br from-horizonte to-terracota" />
                 )}
 
+                {/* O card inteiro leva ao WhatsApp, não só o botão */}
+                <a
+                    href="https://wa.me/message/L7NFE5AFYVTZH1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Solicitar roteiro personalizado: ${dest.title}`}
+                    className="absolute inset-0 z-20"
+                />
+
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
@@ -139,7 +149,8 @@ function DestinationCard({ dest, index }) {
                         href="https://wa.me/message/L7NFE5AFYVTZH1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block w-full border border-brisa/50 text-brisa font-sans font-medium py-3 px-6 rounded-full hover:bg-brisa hover:text-horizonte transition-all duration-300 text-center uppercase tracking-widest text-xs hover:shadow-lg backdrop-blur-sm"
+                        aria-label={`Solicitar roteiro personalizado: ${dest.title}`}
+                        className="inline-block w-full border border-brisa/50 text-brisa font-sans font-medium py-3 px-6 rounded-full group-hover:bg-brisa group-hover:text-horizonte transition-all duration-300 text-center uppercase tracking-widest text-xs group-hover:shadow-lg backdrop-blur-sm"
                     >
                         Solicitar Roteiro Personalizado
                     </a>
@@ -193,12 +204,6 @@ export default function Destinations() {
                         Não trabalhamos com pacotes prontos. Partimos do que você sente
                         vontade de viver — e desenhamos o roteiro a partir daí.
                     </p>
-                    <a
-                        href="/destinos"
-                        className="inline-block mt-6 font-sans text-sm uppercase tracking-[0.2em] text-canto-da-terra border-b border-canto-da-terra/40 pb-1 hover:text-terracota hover:border-terracota transition-colors"
-                    >
-                        Conheça nossos guias de destino
-                    </a>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -206,6 +211,54 @@ export default function Destinations() {
                         <DestinationCard key={dest.id} dest={dest} index={index} />
                     ))}
                 </div>
+
+                {/* Guias da Curadoria */}
+                <motion.div
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="mt-24 md:mt-28 rounded-[2.5rem] bg-horizonte overflow-hidden relative"
+                >
+                    <div className="absolute inset-0 pointer-events-none opacity-[0.07]">
+                        <Image src="/images/map-bg.svg" alt="" fill className="object-cover" />
+                    </div>
+                    <div className="relative grid grid-cols-1 lg:grid-cols-5 gap-10 p-8 md:p-14 items-center">
+                        <div className="lg:col-span-2">
+                            <span className="font-sans text-duna text-xs uppercase tracking-[0.25em]">Guias da Curadoria</span>
+                            <h3 className="font-serif text-brisa text-4xl md:text-5xl mt-3 mb-5 leading-tight">
+                                Antes de ir, conheça o destino com a gente
+                            </h3>
+                            <p className="font-sans text-brisa/80 text-base md:text-lg leading-relaxed mb-8">
+                                Melhor época, quantos dias ficar, roteiro dia a dia e o que não pode faltar. Escrito pela nossa curadoria.
+                            </p>
+                            <a
+                                href="/destinos"
+                                className="inline-block bg-duna text-horizonte font-sans font-medium py-4 px-10 rounded-full hover:bg-brisa transition-all duration-300 uppercase tracking-[0.15em] text-xs shadow-lg"
+                            >
+                                Ver todos os guias
+                            </a>
+                        </div>
+                        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {guias.slice(0, 2).map((g) => (
+                                <a key={g.slug} href={`/destinos/${g.slug}`} className="group/guia relative h-72 rounded-3xl overflow-hidden shadow-xl">
+                                    <img
+                                        src={g.capa.src}
+                                        alt={g.capa.alt}
+                                        loading="lazy"
+                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover/guia:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                                        <p className="font-sans text-duna text-xs uppercase tracking-wider">{g.pais}</p>
+                                        <p className="font-serif text-brisa text-3xl mt-1">{g.nome}</p>
+                                        <p className="font-sans text-brisa/90 text-sm mt-2">Ler o guia →</p>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
 
                 {/* Fechamento — qualquer destino */}
                 <motion.div

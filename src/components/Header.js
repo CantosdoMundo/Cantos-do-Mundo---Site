@@ -5,7 +5,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ lightLogo = false }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { scrollY } = useScroll();
@@ -43,7 +43,7 @@ export default function Header() {
                         src="/images/logo-horizontal-2.svg"
                         alt="Cantos do Mundo"
                         fill
-                        className="object-contain object-left"
+                        className={`object-contain object-left transition-[filter] duration-300 ${lightLogo && !isScrolled && !isMobileMenuOpen ? "brightness-0 invert" : ""}`}
                         priority
                     />
                 </Link>

@@ -97,7 +97,7 @@ export default async function DestinoPage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(dadosEstruturados(d)) }}
             />
-            <Header />
+            <Header lightLogo />
 
             {/* Capa: mesma linguagem do hero da home, foto inteira e escurecimento só embaixo */}
             <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
