@@ -26,6 +26,7 @@ export const destinos = [
                 "CC BY-SA 4.0",
                 "https://commons.wikimedia.org/wiki/File:Ecosistemas_nevados_en_el_Cerro_Otto_de_Bariloche,_Argentina.jpg"
             ),
+            legenda: "A neve chega em junho.",
         },
         essencial: [
             { rotulo: "Melhor época para neve", valor: "Julho a setembro" },
@@ -164,6 +165,159 @@ export const destinos = [
             },
             {
                 p: "Quanto custa uma viagem para Bariloche?",
+                r: "Depende da época, do hotel e dos passeios. Como cada roteiro é montado sob medida, a Curadoria Cantos do Mundo envia uma proposta personalizada pelo WhatsApp.",
+            },
+        ],
+    },
+    {
+        slug: "gramado",
+        nome: "Gramado",
+        pais: "Serra Gaúcha · Brasil",
+        titulo: "Gramado e Serra Gaúcha: frio, vinho e charme europeu",
+        resumo:
+            "Guia da Curadoria Cantos do Mundo para Gramado, Canela e a Serra Gaúcha: melhor época, Natal Luz, quantos dias ficar, roteiro dia a dia, vinícolas e dicas.",
+        chamada: "Frio na serra, vinho na taça e tempo para os dois.",
+        capa: {
+            src: "/images/destinos/gramado/capa.jpg",
+            alt: "Cascata do Caracol caindo entre a mata, em Canela",
+            credito: credito("Tiago Fioreze", "CC BY-SA 3.0", "https://commons.wikimedia.org/wiki/File:Caracol_falls_(2_April_2008).jpg"),
+        },
+        inverno: {
+            src: "/images/destinos/gramado/inverno.jpg",
+            alt: "Centro de Gramado iluminado à noite",
+            credito: credito(
+                "Felipe Valduga",
+                "CC BY 2.0",
+                "https://commons.wikimedia.org/wiki/File:Light_trails_in_Centro_de_Gramado_at_night_(25415341663).jpg"
+            ),
+            legenda: "Gramado à noite tem outro encanto.",
+        },
+        essencial: [
+            { rotulo: "Melhor época", valor: "Inverno (jun–ago) e Natal Luz (out–jan)" },
+            { rotulo: "Dias ideais", valor: "4 a 5 dias" },
+            { rotulo: "Como chegar", valor: "Voo até Porto Alegre + 2h de estrada" },
+            { rotulo: "Fica a", valor: "115 km de Porto Alegre" },
+        ],
+        introducao: [
+            "Gramado e Canela ficam na Serra Gaúcha, a cerca de 115 km de Porto Alegre. Arquitetura de inspiração europeia, ruas floridas, chocolate artesanal e fondue fazem da região um dos destinos mais procurados do Brasil, especialmente por casais e famílias.",
+            "Dá para combinar a viagem com o Vale dos Vinhedos, em Bento Gonçalves, a pouco mais de uma hora e meia de estrada, para um roteiro completo de vinho, gastronomia e natureza.",
+        ],
+        epocas: [
+            {
+                periodo: "Junho a agosto",
+                titulo: "Inverno",
+                texto: "A temporada mais charmosa: frio de verdade, lareira, fondue e chocolate quente. Julho é o mês mais cheio, por causa das férias escolares.",
+            },
+            {
+                periodo: "Outubro a janeiro",
+                titulo: "Natal Luz",
+                texto: "A cidade inteira iluminada, desfiles e espetáculos de Natal. É uma das épocas mais disputadas: vale reservar com antecedência.",
+            },
+            {
+                periodo: "Setembro a novembro",
+                titulo: "Primavera",
+                texto: "Hortênsias e jardins floridos, clima ameno e menos movimento. Ótima para passear a pé e conhecer as vinícolas.",
+            },
+            {
+                periodo: "Janeiro a abril",
+                titulo: "Verão e vindima",
+                texto: "Dias longos e frescos na serra. De janeiro a março acontece a colheita da uva no Vale dos Vinhedos.",
+            },
+        ],
+        experiencias: [
+            {
+                nome: "Lago Negro",
+                texto: "Um lago cercado de pinheiros, com pedalinhos em forma de cisne e trilha à beira d'água. Um dos cartões-postais de Gramado.",
+                foto: {
+                    src: "/images/destinos/gramado/lago-negro.jpg",
+                    alt: "Pedalinhos em forma de cisne no Lago Negro",
+                    credito: credito("Yeuxpapilon", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Lago_Negro_Gramado.jpg"),
+                },
+            },
+            {
+                nome: "Rua Coberta e centro",
+                texto: "Cafés, restaurantes de fondue, chocolaterias e lojas no centro de Gramado, que se percorre todo a pé.",
+                foto: {
+                    src: "/images/destinos/gramado/rua-coberta.jpg",
+                    alt: "Rua Coberta de Gramado com mesas e jardins",
+                    credito: credito("Larissa Fraga", "CC BY 3.0", "https://commons.wikimedia.org/wiki/File:Rua_Coberta_-_Gramado_-_panoramio.jpg"),
+                },
+            },
+            {
+                nome: "Catedral de Pedra",
+                texto: "A igreja em estilo gótico, toda em pedra basáltica, no centro de Canela, a 8 km de Gramado.",
+                foto: {
+                    src: "/images/destinos/gramado/catedral.jpg",
+                    alt: "Catedral de Pedra de Canela sob céu azul",
+                    credito: credito("Rosanetur", "CC BY 2.0", "https://commons.wikimedia.org/wiki/File:Catedral_de_Pedra,_Canela_RS.jpg"),
+                },
+            },
+            {
+                nome: "Cascata do Caracol",
+                texto: "Uma queda de mais de 100 metros no meio da mata, no Parque do Caracol, em Canela. Há mirante, trilha e bondinho aéreo.",
+                foto: {
+                    src: "/images/destinos/gramado/caracol.jpg",
+                    alt: "Cascata do Caracol vista do alto do vale",
+                    credito: credito("Dalton Scavassa", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Cascata_Caracol_-_Canela_RS.jpg"),
+                },
+            },
+            {
+                nome: "Vale dos Vinhedos",
+                texto: "Vinícolas familiares e grandes, com degustação e almoço entre os parreirais, em Bento Gonçalves.",
+                foto: {
+                    src: "/images/destinos/gramado/vinhedos.jpg",
+                    alt: "Parreirais e vinícola no Vale dos Vinhedos",
+                    credito: credito(
+                        "MTur Destinos / Renato Soares",
+                        "Domínio público",
+                        "https://commons.wikimedia.org/wiki/File:RenatoSoares_Vale_dos_Vinhedos_Bento_Goncalves_RS_(40913617852).jpg"
+                    ),
+                },
+            },
+            {
+                nome: "Natal Luz",
+                texto: "De outubro a janeiro, Gramado vira cenário de Natal, com luzes, desfiles e espetáculos.",
+                foto: {
+                    src: "/images/destinos/gramado/natal-luz.jpg",
+                    alt: "Decoração do Natal Luz iluminando o centro de Gramado",
+                    credito: credito("Larissa Fraga", "CC BY 3.0", "https://commons.wikimedia.org/wiki/File:Natal_Luz_-_Gramado_-_panoramio.jpg"),
+                },
+            },
+        ],
+        roteiro: {
+            titulo: "Roteiro-exemplo de 4 noites",
+            nota: "Cada roteiro da Cantos é montado sob medida. Este é só um ponto de partida.",
+            dias: [
+                { dia: "Dia 1", texto: "Chegada a Porto Alegre, traslado à serra e noite de fondue no centro de Gramado." },
+                { dia: "Dia 2", texto: "Lago Negro pela manhã, Rua Coberta, chocolaterias e o centro a pé." },
+                { dia: "Dia 3", texto: "Canela: Catedral de Pedra e Parque do Caracol, com a cascata e o bondinho." },
+                { dia: "Dia 4", texto: "Dia no Vale dos Vinhedos com degustação e almoço entre os parreirais." },
+                { dia: "Dia 5", texto: "Manhã livre para as últimas compras e traslado de volta a Porto Alegre." },
+            ],
+        },
+        faq: [
+            {
+                p: "Qual a melhor época para ir a Gramado?",
+                r: "Depende do que você procura: o inverno (junho a agosto) para o frio e o clima de serra, e o Natal Luz (outubro a janeiro) para a cidade iluminada. Primavera e verão são mais tranquilos e ótimos para as vinícolas.",
+            },
+            {
+                p: "Quantos dias ficar em Gramado?",
+                r: "De 4 a 5 dias dá para conhecer Gramado e Canela com calma. Com o Vale dos Vinhedos, o ideal é somar um ou dois dias.",
+            },
+            {
+                p: "Como chegar a Gramado?",
+                r: "O aeroporto mais próximo é o de Porto Alegre. De lá são cerca de 115 km, perto de duas horas de estrada, de traslado ou carro alugado.",
+            },
+            {
+                p: "Neva em Gramado?",
+                r: "É raro. A neve na Serra Gaúcha acontece em poucos dias de alguns invernos e não dá para programar a viagem por ela. O que é garantido no inverno é o frio e o clima de montanha.",
+            },
+            {
+                p: "Dá para conhecer Gramado e o Vale dos Vinhedos na mesma viagem?",
+                r: "Sim. O Vale dos Vinhedos, em Bento Gonçalves, fica a cerca de uma hora e meia de Gramado e cabe bem num roteiro de 5 ou 6 dias.",
+            },
+            {
+                p: "Quanto custa uma viagem para Gramado?",
                 r: "Depende da época, do hotel e dos passeios. Como cada roteiro é montado sob medida, a Curadoria Cantos do Mundo envia uma proposta personalizada pelo WhatsApp.",
             },
         ],

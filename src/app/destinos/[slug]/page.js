@@ -102,7 +102,7 @@ export default async function DestinoPage({ params }) {
             {/* Capa: mesma linguagem do hero da home, foto inteira e escurecimento só embaixo */}
             <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
                 <img src={d.capa.src} alt={d.capa.alt} className="absolute inset-0 h-full w-full object-cover object-[50%_60%]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/55" />
                 <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end pb-20 md:pb-24">
                     <span className="font-sans text-duna text-sm uppercase tracking-[0.25em]">
                         Guia da Curadoria · {d.pais}
@@ -155,7 +155,7 @@ export default async function DestinoPage({ params }) {
                             <div className="relative h-[420px] lg:h-full min-h-[420px] rounded-3xl overflow-hidden shadow-xl">
                                 <img src={d.inverno.src} alt={d.inverno.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                <p className="absolute bottom-6 left-6 right-6 font-script text-brisa text-3xl">A neve chega em junho.</p>
+                                <p className="absolute bottom-6 left-6 right-6 font-script text-brisa text-3xl">{d.inverno.legenda}</p>
                             </div>
                             <Credito c={d.inverno.credito} />
                         </div>
