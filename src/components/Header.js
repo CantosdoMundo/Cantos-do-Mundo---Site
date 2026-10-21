@@ -56,6 +56,9 @@ export default function Header() {
                     <Link href="#sobre" onClick={(e) => scrollToSection(e, '#sobre')} className={`transition-colors font-sans font-medium ${isScrolled ? "text-horizonte hover:text-terracota" : "text-brisa/90 hover:text-duna"}`}>
                         Sobre
                     </Link>
+                    <Link href="/destinos" className={`transition-colors font-sans font-medium ${isScrolled ? "text-horizonte hover:text-terracota" : "text-brisa/90 hover:text-duna"}`}>
+                        Guias
+                    </Link>
                     <Link
                         href="https://wa.me/message/L7NFE5AFYVTZH1"
                         target="_blank"
@@ -110,6 +113,12 @@ export default function Header() {
                                 className="text-horizonte hover:text-terracota transition-colors font-sans font-medium text-lg"
                             >
                                 Sobre
+                            </Link>
+                            <Link
+                                href="/destinos"
+                                className="text-horizonte hover:text-terracota transition-colors font-sans font-medium text-lg"
+                            >
+                                Guias de destino
                             </Link>
                             <Link
                                 href="https://wa.me/message/L7NFE5AFYVTZH1"

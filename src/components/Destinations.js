@@ -193,6 +193,12 @@ export default function Destinations() {
                         Não trabalhamos com pacotes prontos. Partimos do que você sente
                         vontade de viver — e desenhamos o roteiro a partir daí.
                     </p>
+                    <a
+                        href="/destinos"
+                        className="inline-block mt-6 font-sans text-sm uppercase tracking-[0.2em] text-canto-da-terra border-b border-canto-da-terra/40 pb-1 hover:text-terracota hover:border-terracota transition-colors"
+                    >
+                        Conheça nossos guias de destino
+                    </a>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

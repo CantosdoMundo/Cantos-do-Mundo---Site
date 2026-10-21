@@ -12,6 +12,7 @@ export default function Footer() {
                             <li><a href="/" className="hover:text-duna transition-colors">Início</a></li>
                             <li><a href="/#destinos" className="hover:text-duna transition-colors">Destinos</a></li>
                             <li><a href="/#sobre" className="hover:text-duna transition-colors">Sobre Nós</a></li>
+                            <li><a href="/destinos" className="hover:text-duna transition-colors">Guias de destino</a></li>
                             <li><a href="/#depoimentos" className="hover:text-duna transition-colors">Depoimentos</a></li>
                         </ul>
                     </div>

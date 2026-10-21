@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SectionSeparator, { MapBackground } from "@/components/SectionSeparator";
 import { destinos, getDestino } from "@/content/destinos";
 import { notFound } from "next/navigation";
 
@@ -34,10 +35,19 @@ function Credito({ c, claro = false }) {
             href={c.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-[11px] font-sans ${claro ? "text-brisa/70" : "text-horizonte/60"} hover:underline`}
+            className={`text-[10px] font-sans tracking-wide ${claro ? "text-brisa/60" : "text-text-main/40"} hover:underline`}
         >
             Foto: {c.autor} ({c.licenca})
         </a>
+    );
+}
+
+function Titulo({ eyebrow, children, center = true }) {
+    return (
+        <div className={`${center ? "text-center" : ""} mb-16`}>
+            <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">{eyebrow}</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2">{children}</h2>
+        </div>
     );
 }
 
@@ -59,7 +69,6 @@ function dadosEstruturados(d) {
             name: d.roteiro.titulo + " em " + d.nome,
             description: d.resumo,
             url,
-            touristType: ["Casais", "Famílias", "Viajantes que buscam neve"],
             itinerary: {
                 "@type": "ItemList",
                 itemListElement: d.roteiro.dias.map((x, i) => ({
@@ -90,88 +99,125 @@ export default async function DestinoPage({ params }) {
             />
             <Header />
 
-            {/* Capa */}
-            <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
-                <img src={d.capa.src} alt={d.capa.alt} className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60" />
-                <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end pb-16">
-                    <p className="font-sans text-duna uppercase tracking-[0.2em] text-sm mb-3">
+            {/* Capa: mesma linguagem do hero da home, foto inteira e escurecimento só embaixo */}
+            <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
+                <img src={d.capa.src} alt={d.capa.alt} className="absolute inset-0 h-full w-full object-cover object-[50%_60%]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/30" />
+                <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end pb-20 md:pb-24">
+                    <span className="font-sans text-duna text-sm uppercase tracking-[0.25em]">
                         Guia da Curadoria · {d.pais}
-                    </p>
-                    <h1 className="font-script text-brisa text-7xl md:text-8xl leading-none">{d.nome}</h1>
-                    <p className="font-serif text-brisa text-2xl md:text-3xl mt-4 max-w-2xl">{d.chamada}</p>
-                    <div className="mt-6">
+                    </span>
+                    <h1 className="font-serif text-brisa text-6xl md:text-8xl mt-3 leading-none">{d.nome}</h1>
+                    <p className="font-script text-duna text-3xl md:text-4xl mt-5">{d.chamada}</p>
+                    <div className="mt-8">
                         <Credito c={d.capa.credito} claro />
                     </div>
                 </div>
             </section>
 
-            {/* O essencial */}
-            <section className="container mx-auto px-4 -mt-10 relative z-20">
-                <dl className="grid grid-cols-2 md:grid-cols-4 gap-px bg-duna/40 rounded-2xl overflow-hidden shadow-lg">
-                    {d.essencial.map((e) => (
-                        <div key={e.rotulo} className="bg-brisa p-6">
-                            <dt className="font-sans text-xs uppercase tracking-wider text-terracota">{e.rotulo}</dt>
-                            <dd className="font-serif text-horizonte text-xl mt-2">{e.valor}</dd>
+            {/* Introdução + o essencial */}
+            <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">
+                <MapBackground />
+                <div className="container mx-auto px-4 relative z-10">
+                    <SectionSeparator />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div>
+                            <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">
+                                Sobre o destino
+                            </span>
+                            <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-8">{d.titulo}</h2>
+                            <div className="space-y-6 text-lg text-text-main/80 font-sans leading-relaxed">
+                                {d.introducao.map((p, i) => (
+                                    <p key={i}>{p}</p>
+                                ))}
+                            </div>
                         </div>
-                    ))}
-                </dl>
+                        <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 pt-8 md:pt-14 border-t md:border-t-0 md:border-l border-canto-da-terra/10 md:pl-12">
+                            {d.essencial.map((e) => (
+                                <div key={e.rotulo}>
+                                    <dt className="font-sans text-xs uppercase tracking-wider text-canto-da-terra">{e.rotulo}</dt>
+                                    <dd className="font-serif text-2xl text-horizonte mt-2">{e.valor}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
+                </div>
             </section>
 
-            {/* Introdução */}
-            <section className="container mx-auto px-4 py-20 max-w-3xl">
-                <h2 className="font-serif text-terracota text-4xl mb-8">{d.titulo}</h2>
-                {d.introducao.map((p, i) => (
-                    <p key={i} className="font-sans text-horizonte text-lg leading-relaxed mb-5">{p}</p>
-                ))}
+            {/* Quando ir: foto de inverno + estações */}
+            <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">
+                <MapBackground opacity="opacity-[0.02]" />
+                <div className="container mx-auto px-4 relative z-10">
+                    <SectionSeparator />
+                    <Titulo eyebrow="Quando ir">Cada estação, uma {d.nome} diferente</Titulo>
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-stretch">
+                        <div className="lg:col-span-2">
+                            <div className="relative h-[420px] lg:h-full min-h-[420px] rounded-3xl overflow-hidden shadow-xl">
+                                <img src={d.inverno.src} alt={d.inverno.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                                <p className="absolute bottom-6 left-6 right-6 font-script text-brisa text-3xl">A neve chega em junho.</p>
+                            </div>
+                            <Credito c={d.inverno.credito} />
+                        </div>
+                        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            {d.epocas.map((e) => (
+                                <article key={e.periodo} className="rounded-3xl bg-white/60 border border-canto-da-terra/10 p-8">
+                                    <p className="font-sans text-xs uppercase tracking-wider text-canto-da-terra">{e.periodo}</p>
+                                    <h3 className="font-serif text-2xl text-horizonte mt-2 mb-3">{e.titulo}</h3>
+                                    <p className="font-sans text-text-main/75 leading-relaxed">{e.texto}</p>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            {/* Quando ir */}
-            <section className="bg-horizonte py-20">
-                <div className="container mx-auto px-4">
-                    <p className="font-script text-duna text-4xl mb-2">Quando ir</p>
-                    <h2 className="font-serif text-brisa text-4xl mb-12">Cada estação, uma Bariloche diferente</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {d.epocas.map((e) => (
-                            <article key={e.periodo} className="rounded-2xl bg-white/10 p-6">
-                                <p className="font-sans text-xs uppercase tracking-wider text-duna">{e.periodo}</p>
-                                <h3 className="font-serif text-brisa text-2xl mt-2 mb-3">{e.titulo}</h3>
-                                <p className="font-sans text-brisa/85 leading-relaxed">{e.texto}</p>
+            {/* Experiências: cards no formato dos destinos da home */}
+            <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">
+                <MapBackground />
+                <div className="container mx-auto px-4 relative z-10">
+                    <SectionSeparator />
+                    <Titulo eyebrow="Cantos únicos">O que viver em {d.nome}</Titulo>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {d.experiencias.map((x) => (
+                            <article key={x.nome} className="group">
+                                <div className="relative h-[440px] rounded-3xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
+                                    <img
+                                        src={x.foto.src}
+                                        alt={x.foto.alt}
+                                        loading="lazy"
+                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                                    <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                                        <h3 className="font-serif text-3xl text-brisa mb-3">{x.nome}</h3>
+                                        <p className="font-sans text-brisa/90 text-sm leading-relaxed">{x.texto}</p>
+                                    </div>
+                                </div>
+                                <div className="mt-2 px-2">
+                                    <Credito c={x.foto.credito} />
+                                </div>
                             </article>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Experiências */}
-            <section className="container mx-auto px-4 py-20">
-                <p className="font-script text-terracota text-4xl mb-2">Cantos únicos</p>
-                <h2 className="font-serif text-horizonte text-4xl mb-12">O que viver em {d.nome}</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {d.experiencias.map((x) => (
-                        <article key={x.nome}>
-                            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                                <img src={x.foto.src} alt={x.foto.alt} loading="lazy" className="h-full w-full object-cover" />
-                            </div>
-                            <Credito c={x.foto.credito} />
-                            <h3 className="font-serif text-terracota text-2xl mt-3 mb-2">{x.nome}</h3>
-                            <p className="font-sans text-horizonte leading-relaxed">{x.texto}</p>
-                        </article>
-                    ))}
-                </div>
-            </section>
-
             {/* Roteiro */}
-            <section className="bg-[#F4E9D3] py-20">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <p className="font-script text-terracota text-4xl mb-2">Seu roteiro</p>
-                    <h2 className="font-serif text-horizonte text-4xl mb-3">{d.roteiro.titulo}</h2>
-                    <p className="font-sans text-horizonte/80 mb-10">{d.roteiro.nota}</p>
-                    <ol className="space-y-4">
+            <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">
+                <MapBackground opacity="opacity-[0.02]" />
+                <div className="container mx-auto px-4 relative z-10 max-w-4xl">
+                    <SectionSeparator />
+                    <div className="text-center mb-14">
+                        <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">Seu roteiro</span>
+                        <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-4">{d.roteiro.titulo}</h2>
+                        <p className="font-sans text-text-main/70 text-lg">{d.roteiro.nota}</p>
+                    </div>
+                    <ol className="space-y-1">
                         {d.roteiro.dias.map((x) => (
-                            <li key={x.dia} className="flex gap-6 items-baseline border-b border-terracota/20 pb-4">
+                            <li key={x.dia} className="flex gap-6 items-baseline border-b border-canto-da-terra/10 py-4">
                                 <span className="font-script text-terracota text-3xl w-28 shrink-0 whitespace-nowrap">{x.dia}</span>
-                                <span className="font-sans text-horizonte text-lg">{x.texto}</span>
+                                <span className="font-sans text-text-main/80 text-lg">{x.texto}</span>
                             </li>
                         ))}
                     </ol>
@@ -179,35 +225,44 @@ export default async function DestinoPage({ params }) {
             </section>
 
             {/* Perguntas frequentes */}
-            <section className="container mx-auto px-4 py-20 max-w-3xl">
-                <h2 className="font-serif text-horizonte text-4xl mb-10">Perguntas frequentes sobre {d.nome}</h2>
-                <div className="divide-y divide-duna">
-                    {d.faq.map((f) => (
-                        <details key={f.p} className="group py-5">
-                            <summary className="font-serif text-terracota text-xl cursor-pointer list-none flex justify-between gap-4">
-                                {f.p}
-                                <span className="text-horizonte group-open:rotate-45 transition-transform">+</span>
-                            </summary>
-                            <p className="font-sans text-horizonte leading-relaxed mt-3">{f.r}</p>
-                        </details>
-                    ))}
+            <section className="py-24 md:py-32 bg-brisa relative overflow-hidden">
+                <MapBackground />
+                <div className="container mx-auto px-4 relative z-10 max-w-3xl">
+                    <SectionSeparator />
+                    <Titulo eyebrow="Dúvidas">Perguntas frequentes sobre {d.nome}</Titulo>
+                    <div className="divide-y divide-canto-da-terra/10">
+                        {d.faq.map((f) => (
+                            <details key={f.p} className="group py-6">
+                                <summary className="font-serif text-xl md:text-2xl text-horizonte cursor-pointer list-none flex justify-between gap-6">
+                                    {f.p}
+                                    <span className="text-canto-da-terra group-open:rotate-45 transition-transform shrink-0">+</span>
+                                </summary>
+                                <p className="font-sans text-text-main/80 text-lg leading-relaxed mt-4">{f.r}</p>
+                            </details>
+                        ))}
+                    </div>
                 </div>
             </section>
 
-            {/* Chamada */}
-            <section className="bg-terracota py-16">
-                <div className="container mx-auto px-4 text-center">
-                    <p className="font-script text-duna text-4xl">Vamos montar a sua?</p>
-                    <h2 className="font-serif text-brisa text-3xl md:text-4xl mt-3 mb-8">
-                        Conte para a nossa curadoria como você imagina essa viagem.
+            {/* Fechamento no mesmo tom da home */}
+            <section className="pb-28 md:pb-36 bg-brisa relative overflow-hidden">
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <SectionSeparator className="mb-16" />
+                    <p className="font-sans text-terracota text-xs uppercase tracking-[0.25em] mb-4">Vamos montar a sua?</p>
+                    <h2 className="font-script text-canto-da-terra text-5xl md:text-7xl leading-[1.15] mb-6">
+                        {d.nome} do seu jeito
                     </h2>
+                    <p className="font-sans text-text-main/75 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                        Conte para a nossa curadoria quem vai, quando e o que vocês sonham viver. A gente desenha o
+                        roteiro a partir daí.
+                    </p>
                     <a
                         href={WHATSAPP}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-brisa text-terracota font-sans font-medium px-8 py-4 rounded-full hover:bg-duna transition-colors"
+                        className="inline-block bg-canto-da-terra text-brisa font-sans font-medium py-4 px-10 rounded-full hover:bg-terracota transition-all duration-300 uppercase tracking-[0.15em] text-xs shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                     >
-                        Falar com a Curadoria no WhatsApp
+                        Solicitar roteiro personalizado
                     </a>
                 </div>
             </section>

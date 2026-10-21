@@ -14,8 +14,13 @@ export const destinos = [
             "Guia da Curadoria Cantos do Mundo para Bariloche: melhor época para neve, quantos dias ficar, roteiro dia a dia, passeios e documentos para brasileiros.",
         chamada: "Neve, lagos e um silêncio que fica com você.",
         capa: {
+            src: "/images/destinos/bariloche/capa.jpg",
+            alt: "Península do Llao Llao e o lago Nahuel Huapi, em Bariloche",
+            credito: credito("Fernando", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Llao_Llao_Peninsula.jpg"),
+        },
+        inverno: {
             src: "/images/destinos/bariloche/destino.jpg",
-            alt: "Pôr do sol sobre montanhas nevadas no Cerro Otto, em Bariloche",
+            alt: "Pôr do sol sobre os pinheiros nevados do Cerro Otto",
             credito: credito(
                 "Brandon Antonio Segura Torres e Priscilla Vieto Bonilla",
                 "CC BY-SA 4.0",
@@ -69,8 +74,8 @@ export const destinos = [
                 texto: "O passeio clássico: Punto Panorámico, a península do Llao Llao, Bahía López e a Colonia Suiza. Lagos e montanhas em cada curva.",
                 foto: {
                     src: "/images/destinos/bariloche/chico_a.jpg",
-                    alt: "Península do Llao Llao entre os lagos de Bariloche",
-                    credito: credito("Fernando", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Llao_Llao_Peninsula.jpg"),
+                    alt: "Vista do Llao Llao a partir do Punto Panorámico",
+                    credito: credito("Alexrebolledo", "CC BY-SA 3.0", "https://commons.wikimedia.org/wiki/File:Llao_Llao_desde_punto_panor%C3%A1mico.JPG"),
                 },
             },
             {
