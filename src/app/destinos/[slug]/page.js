@@ -35,7 +35,7 @@ function Credito({ c, claro = false }) {
             href={c.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-[10px] font-sans tracking-wide ${claro ? "text-brisa/60" : "text-text-main/40"} hover:underline`}
+            className={`text-[10px] font-sans tracking-wide ${claro ? "text-brisa/60" : "text-horizonte/50"} hover:underline`}
         >
             Foto: {c.autor} ({c.licenca})
         </a>
@@ -164,7 +164,7 @@ export default async function DestinoPage({ params }) {
                                 <article key={e.periodo} className="rounded-3xl bg-white/60 border border-canto-da-terra/10 p-8">
                                     <p className="font-sans text-xs uppercase tracking-wider text-canto-da-terra">{e.periodo}</p>
                                     <h3 className="font-serif text-2xl text-horizonte mt-2 mb-3">{e.titulo}</h3>
-                                    <p className="font-sans text-text-main/75 leading-relaxed">{e.texto}</p>
+                                    <p className="font-sans text-text-main/85 leading-relaxed">{e.texto}</p>
                                 </article>
                             ))}
                         </div>
@@ -211,7 +211,7 @@ export default async function DestinoPage({ params }) {
                     <div className="text-center mb-14">
                         <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">Seu roteiro</span>
                         <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-4">{d.roteiro.titulo}</h2>
-                        <p className="font-sans text-text-main/70 text-lg">{d.roteiro.nota}</p>
+                        <p className="font-sans text-text-main/85 text-lg">{d.roteiro.nota}</p>
                     </div>
                     <ol className="space-y-1">
                         {d.roteiro.dias.map((x) => (
@@ -252,7 +252,7 @@ export default async function DestinoPage({ params }) {
                     <h2 className="font-script text-canto-da-terra text-5xl md:text-7xl leading-[1.15] mb-6">
                         {d.nome} do seu jeito
                     </h2>
-                    <p className="font-sans text-text-main/75 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+                    <p className="font-sans text-text-main/85 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
                         Conte para a nossa curadoria quem vai, quando e o que vocês sonham viver. A gente desenha o
                         roteiro a partir daí.
                     </p>
