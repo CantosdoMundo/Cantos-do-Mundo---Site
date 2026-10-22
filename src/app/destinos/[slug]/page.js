@@ -29,16 +29,29 @@ export async function generateMetadata({ params }) {
     };
 }
 
-function Credito({ c, claro = false }) {
+function CreditosFotos({ d }) {
+    const fotos = [
+        { nome: "Capa", c: d.capa.credito },
+        { nome: "Quando ir", c: d.inverno.credito },
+        ...d.experiencias.map((x) => ({ nome: x.nome, c: x.foto.credito })),
+    ];
     return (
-        <a
-            href={c.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`text-[10px] font-sans tracking-wide ${claro ? "text-brisa/60" : "text-horizonte/50"} hover:underline`}
-        >
-            Foto: {c.autor} ({c.licenca})
-        </a>
+        <details className="container mx-auto px-4 pb-10 max-w-3xl text-center">
+            <summary className="font-sans text-[11px] uppercase tracking-[0.2em] text-text-main/50 cursor-pointer list-none hover:text-canto-da-terra">
+                Créditos das fotos
+            </summary>
+            <p className="font-sans text-xs text-text-main/60 leading-relaxed mt-3">
+                {fotos.map((f, i) => (
+                    <span key={f.nome}>
+                        {f.nome}:{" "}
+                        <a href={f.c.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            {f.c.autor}
+                        </a>{" "}
+                        ({f.c.licenca}){i < fotos.length - 1 ? " · " : ""}
+                    </span>
+                ))}
+            </p>
+        </details>
     );
 }
 
@@ -109,9 +122,6 @@ export default async function DestinoPage({ params }) {
                     </span>
                     <h1 className="font-serif text-brisa text-6xl md:text-8xl mt-3 leading-none">{d.nome}</h1>
                     <p className="font-script text-duna text-3xl md:text-4xl mt-5">{d.chamada}</p>
-                    <div className="mt-8">
-                        <Credito c={d.capa.credito} claro />
-                    </div>
                 </div>
             </section>
 
@@ -157,7 +167,6 @@ export default async function DestinoPage({ params }) {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                 <p className="absolute bottom-6 left-6 right-6 font-script text-brisa text-3xl">{d.inverno.legenda}</p>
                             </div>
-                            <Credito c={d.inverno.credito} />
                         </div>
                         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {d.epocas.map((e) => (
@@ -203,9 +212,6 @@ export default async function DestinoPage({ params }) {
                                         aria-label={`Falar com a Curadoria sobre ${x.nome}`}
                                         className="absolute inset-0 z-20"
                                     />
-                                </div>
-                                <div className="mt-2 px-2">
-                                    <Credito c={x.foto.credito} />
                                 </div>
                             </article>
                         ))}
@@ -277,6 +283,7 @@ export default async function DestinoPage({ params }) {
                 </div>
             </section>
 
+            <CreditosFotos d={d} />
             <Footer />
         </main>
     );
