@@ -197,7 +197,7 @@ export default function Destinations() {
                     <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">
                         Roteiros sob medida
                     </span>
-                    <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-4">
+                    <h2 className="font-serif text-4xl md:text-5xl text-canto-da-terra mt-2 mb-4">
                         Que viagem o seu momento pede?
                     </h2>
                     <p className="font-sans text-text-main/80 text-lg max-w-2xl mx-auto">

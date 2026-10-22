@@ -59,7 +59,7 @@ function Titulo({ eyebrow, children, center = true }) {
     return (
         <div className={`${center ? "text-center" : ""} mb-16`}>
             <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">{eyebrow}</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2">{children}</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-canto-da-terra mt-2">{children}</h2>
         </div>
     );
 }
@@ -135,7 +135,7 @@ export default async function DestinoPage({ params }) {
                             <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">
                                 Sobre o destino
                             </span>
-                            <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-8">{d.titulo}</h2>
+                            <h2 className="font-serif text-4xl md:text-5xl text-canto-da-terra mt-2 mb-8">{d.titulo}</h2>
                             <div className="space-y-6 text-lg text-text-main/80 font-sans leading-relaxed">
                                 {d.introducao.map((p, i) => (
                                     <p key={i}>{p}</p>
@@ -146,7 +146,7 @@ export default async function DestinoPage({ params }) {
                             {d.essencial.map((e) => (
                                 <div key={e.rotulo}>
                                     <dt className="font-sans text-xs uppercase tracking-wider text-canto-da-terra">{e.rotulo}</dt>
-                                    <dd className="font-serif text-2xl text-horizonte mt-2">{e.valor}</dd>
+                                    <dd className="font-serif text-2xl text-canto-da-terra mt-2">{e.valor}</dd>
                                 </div>
                             ))}
                         </dl>
@@ -172,7 +172,7 @@ export default async function DestinoPage({ params }) {
                             {d.epocas.map((e) => (
                                 <article key={e.periodo} className="rounded-3xl bg-white/60 border border-canto-da-terra/10 p-8">
                                     <p className="font-sans text-xs uppercase tracking-wider text-canto-da-terra">{e.periodo}</p>
-                                    <h3 className="font-serif text-2xl text-horizonte mt-2 mb-3">{e.titulo}</h3>
+                                    <h3 className="font-serif text-2xl text-canto-da-terra mt-2 mb-3">{e.titulo}</h3>
                                     <p className="font-sans text-text-main/85 leading-relaxed">{e.texto}</p>
                                 </article>
                             ))}
@@ -226,7 +226,7 @@ export default async function DestinoPage({ params }) {
                     <SectionSeparator />
                     <div className="text-center mb-14">
                         <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">Seu roteiro</span>
-                        <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-4">{d.roteiro.titulo}</h2>
+                        <h2 className="font-serif text-4xl md:text-5xl text-canto-da-terra mt-2 mb-4">{d.roteiro.titulo}</h2>
                         <p className="font-sans text-text-main/85 text-lg">{d.roteiro.nota}</p>
                     </div>
                     <ol className="space-y-1">
@@ -249,7 +249,7 @@ export default async function DestinoPage({ params }) {
                     <div className="divide-y divide-canto-da-terra/10">
                         {d.faq.map((f) => (
                             <details key={f.p} className="group py-6">
-                                <summary className="font-serif text-xl md:text-2xl text-horizonte cursor-pointer list-none flex justify-between gap-6">
+                                <summary className="font-serif text-xl md:text-2xl text-canto-da-terra cursor-pointer list-none flex justify-between gap-6">
                                     {f.p}
                                     <span className="text-canto-da-terra group-open:rotate-45 transition-transform shrink-0">+</span>
                                 </summary>

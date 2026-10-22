@@ -53,7 +53,7 @@ export default function TrustBadges() {
                                 <div className="bg-horizonte text-brisa p-4 rounded-full mb-4 shadow-lg">
                                     {badge.icon}
                                 </div>
-                                <h3 className="font-serif text-xl text-horizonte mb-2">
+                                <h3 className="font-serif text-xl text-canto-da-terra mb-2">
                                     {badge.title}
                                 </h3>
                                 <p className="font-sans text-terracota leading-relaxed">

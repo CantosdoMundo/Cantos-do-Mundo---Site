@@ -88,7 +88,7 @@ export default function About() {
                     <div className="space-y-8">
                         <div>
                             <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">Sobre Nós</span>
-                            <h2 className="font-serif text-5xl text-horizonte mt-2 mb-6">Viagens com Alma</h2>
+                            <h2 className="font-serif text-5xl text-canto-da-terra mt-2 mb-6">Viagens com Alma</h2>
                         </div>
 
                         <div className="space-y-6 text-lg text-text-main/80 font-sans leading-relaxed">

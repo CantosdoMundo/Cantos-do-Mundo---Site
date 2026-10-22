@@ -56,7 +56,7 @@ export default function Testimonials() {
                     <span className="text-canto-da-terra font-sans font-medium tracking-wider uppercase text-sm">
                         Depoimentos
                     </span>
-                    <h2 className="font-serif text-4xl md:text-5xl text-horizonte mt-2 mb-6">
+                    <h2 className="font-serif text-4xl md:text-5xl text-canto-da-terra mt-2 mb-6">
                         O carinho de quem viajou
                     </h2>
                 </motion.div>
