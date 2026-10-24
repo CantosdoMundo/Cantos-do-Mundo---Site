@@ -322,6 +322,150 @@ export const destinos = [
             },
         ],
     },
+    {
+        slug: "foz-do-iguacu",
+        nome: "Foz do Iguaçu",
+        pais: "Paraná · Brasil",
+        titulo: "Foz do Iguaçu: as Cataratas dos dois lados da fronteira",
+        resumo:
+            "Guia da Curadoria Cantos do Mundo para Foz do Iguaçu: melhor época, quantos dias ficar, roteiro dia a dia, os dois lados das Cataratas, Parque das Aves, Itaipu e documentos.",
+        chamada: "Um rugido de água que você sente no peito.",
+        capa: {
+            src: "/images/destinos/foz-do-iguacu/capa.jpg",
+            alt: "Garganta do Diabo, a maior queda das Cataratas do Iguaçu",
+            credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+        },
+        inverno: {
+            src: "/images/destinos/foz-do-iguacu/quando-ir.jpg",
+            alt: "Quedas das Cataratas do Iguaçu cercadas pela mata",
+            credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+            legenda: "As Cataratas impressionam o ano inteiro.",
+        },
+        essencial: [
+            { rotulo: "Melhor época", valor: "O ano todo; primavera e outono mais agradáveis" },
+            { rotulo: "Dias ideais", valor: "3 a 4 dias" },
+            { rotulo: "Como chegar", valor: "Voo até o aeroporto de Foz (IGU)" },
+            { rotulo: "Documento", valor: "RG ou passaporte para o lado argentino" },
+        ],
+        introducao: [
+            "Foz do Iguaçu fica no oeste do Paraná, na Tríplice Fronteira entre Brasil, Argentina e Paraguai. É a casa das Cataratas do Iguaçu, um conjunto de quedas d'água no meio da mata atlântica, protegido por parques nacionais dos dois lados da fronteira.",
+            "Do lado brasileiro está a vista panorâmica; do argentino, as passarelas que levam até a beira das quedas. Somando o Parque das Aves, a usina de Itaipu e o pôr do sol no Marco das Três Fronteiras, é um dos destinos mais completos do Brasil para casais e famílias.",
+        ],
+        epocas: [
+            {
+                periodo: "Dezembro a março",
+                titulo: "Verão",
+                texto: "Calor intenso e, em geral, mais água nas quedas. É alta temporada de férias, então vale reservar hotel e passeios com antecedência.",
+            },
+            {
+                periodo: "Abril a junho",
+                titulo: "Outono",
+                texto: "Temperaturas mais amenas e menos movimento. Ótima época para caminhar pelas trilhas com calma.",
+            },
+            {
+                periodo: "Julho e agosto",
+                titulo: "Inverno",
+                texto: "Dias secos e frescos, ótimos para passear. Julho tem férias escolares e mais gente nos parques.",
+            },
+            {
+                periodo: "Setembro a novembro",
+                titulo: "Primavera",
+                texto: "Clima agradável e natureza em plena cor. Uma das melhores combinações de conforto e paisagem.",
+            },
+        ],
+        experiencias: [
+            {
+                nome: "Cataratas, lado brasileiro",
+                texto: "Uma trilha de pouco mais de 1 km com mirantes para o conjunto das quedas, terminando numa passarela sobre o rio, de frente para a Garganta do Diabo.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/lado-brasileiro.jpg",
+                    alt: "Vista panorâmica das Cataratas a partir do lado brasileiro",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+            {
+                nome: "Garganta del Diablo",
+                texto: "No lado argentino, um trem ecológico e passarelas sobre o rio Iguaçu levam até a borda da maior queda. Prepare-se para a névoa e o barulho.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/garganta.jpg",
+                    alt: "Passarela diante da Garganta del Diablo, no lado argentino",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+            {
+                nome: "Barco até as quedas",
+                texto: "Um passeio de bote que sobe o rio e chega bem perto das Cataratas. Você vai se molhar: é parte da graça.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/barco.jpg",
+                    alt: "Barco se aproximando das quedas do Iguaçu",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+            {
+                nome: "Parque das Aves",
+                texto: "Ao lado da entrada do parque nacional, viveiros onde você caminha entre tucanos, araras e flamingos. Encanta todas as idades.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/aves.jpg",
+                    alt: "Tucano no Parque das Aves",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+            {
+                nome: "Usina de Itaipu",
+                texto: "Uma das maiores hidrelétricas do mundo, na fronteira com o Paraguai. A visita panorâmica mostra o tamanho da barragem de perto.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/itaipu.jpg",
+                    alt: "Vertedouro da barragem de Itaipu",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+            {
+                nome: "Marco das Três Fronteiras",
+                texto: "O encontro dos rios Iguaçu e Paraná, com Argentina e Paraguai do outro lado. O lugar certo para o pôr do sol.",
+                foto: {
+                    src: "/images/destinos/foz-do-iguacu/marco.jpg",
+                    alt: "Marco das Três Fronteiras à beira do rio",
+                    credito: credito("PREENCHER", "PREENCHER", "PREENCHER"),
+                },
+            },
+        ],
+        roteiro: {
+            titulo: "Roteiro-exemplo de 3 noites",
+            nota: "Cada roteiro da Cantos é montado sob medida. Este é só um ponto de partida.",
+            dias: [
+                { dia: "Dia 1", texto: "Chegada, check-in e pôr do sol no Marco das Três Fronteiras." },
+                { dia: "Dia 2", texto: "Cataratas do lado brasileiro pela manhã, passeio de barco até as quedas e Parque das Aves à tarde." },
+                { dia: "Dia 3", texto: "Dia inteiro no lado argentino, com as passarelas da Garganta del Diablo." },
+                { dia: "Dia 4", texto: "Usina de Itaipu pela manhã e traslado ao aeroporto." },
+            ],
+        },
+        faq: [
+            {
+                p: "Quantos dias ficar em Foz do Iguaçu?",
+                r: "De 3 a 4 dias. Assim cabem os dois lados das Cataratas, o Parque das Aves e Itaipu sem correria.",
+            },
+            {
+                p: "Qual a melhor época para visitar Foz do Iguaçu?",
+                r: "O destino funciona o ano todo. Outono e primavera têm o clima mais agradável. No verão as quedas costumam ter mais água, mas faz muito calor e é alta temporada.",
+            },
+            {
+                p: "Vale a pena conhecer os dois lados das Cataratas?",
+                r: "Sim. O lado brasileiro mostra a vista panorâmica, e o argentino leva você para perto das quedas, com passarelas que chegam até a Garganta del Diablo. São experiências complementares.",
+            },
+            {
+                p: "Precisa de passaporte para ir ao lado argentino?",
+                r: "Não. Brasileiros entram na Argentina com RG em bom estado ou passaporte válido. Menores sem um dos pais precisam de autorização de viagem. Confirme as regras atuais nos canais oficiais antes de viajar.",
+            },
+            {
+                p: "Foz do Iguaçu é um bom destino para crianças?",
+                r: "Um dos melhores do Brasil. As trilhas são curtas e acessíveis, e o Parque das Aves encanta todas as idades.",
+            },
+            {
+                p: "Quanto custa uma viagem para Foz do Iguaçu?",
+                r: "Depende da época, do hotel e dos passeios. Como cada roteiro é montado sob medida, a Curadoria Cantos do Mundo envia uma proposta personalizada pelo WhatsApp.",
+            },
+        ],
+    },
 ];
 
 export function getDestino(slug) {
