@@ -13,14 +13,14 @@ export default function DestinosPage() {
     return (
         <main className="min-h-screen bg-brisa">
             <Header lightLogo />
-            <section className="relative h-[72vh] min-h-[520px] w-full overflow-hidden bg-black">
+            <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black">
                 <img
                     src="/images/destinos/bariloche/destino.jpg"
                     alt="Pôr do sol sobre montanhas nevadas na Patagônia"
                     className="absolute inset-0 h-full w-full object-cover object-[50%_45%]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/55" />
-                <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end items-center text-center pb-20">
+                <div className="relative z-10 container mx-auto h-full px-4 flex flex-col justify-end items-center text-center pb-20 md:pb-24">
                     <span className="font-sans text-duna text-sm uppercase tracking-[0.25em]">Guias da Curadoria</span>
                     <h1 className="font-serif text-brisa text-5xl md:text-6xl mt-3 max-w-3xl">
                         Para onde o seu próximo canto do mundo vai te levar?
