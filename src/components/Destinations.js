@@ -239,8 +239,8 @@ export default function Destinations() {
                                 Ver todos os guias
                             </a>
                         </div>
-                        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            {guias.slice(0, 2).map((g) => (
+                        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            {guias.slice(0, 3).map((g) => (
                                 <a key={g.slug} href={`/destinos/${g.slug}`} className="group/guia relative h-72 rounded-3xl overflow-hidden shadow-xl">
                                     <img
                                         src={g.capa.src}
@@ -251,7 +251,7 @@ export default function Destinations() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                                         <p className="font-sans text-duna text-xs uppercase tracking-wider">{g.pais}</p>
-                                        <p className="font-serif text-brisa text-3xl mt-1">{g.nome}</p>
+                                        <p className="font-serif text-brisa text-2xl md:text-3xl mt-1 leading-tight">{g.nome}</p>
                                         <p className="font-sans text-brisa/90 text-sm mt-2">Ler o guia →</p>
                                     </div>
                                 </a>

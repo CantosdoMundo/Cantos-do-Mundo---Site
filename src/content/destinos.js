@@ -322,6 +322,167 @@ export const destinos = [
             },
         ],
     },
+    {
+        slug: "foz-do-iguacu",
+        nome: "Foz do Iguaçu",
+        pais: "Paraná · Brasil",
+        titulo: "Foz do Iguaçu: as cataratas pelos dois lados da fronteira",
+        resumo:
+            "Guia da Curadoria Cantos do Mundo para Foz do Iguaçu: melhor época, quantos dias ficar, lado brasileiro e argentino das Cataratas, Itaipu, Parque das Aves, documentos e roteiro dia a dia.",
+        chamada: "Água, mata e arco-íris, pelos dois lados da fronteira.",
+        capa: {
+            src: "/images/destinos/foz/capa.jpg",
+            alt: "Cataratas do Iguaçu com a passarela sobre o rio, no lado brasileiro",
+            credito: credito("Pribruder", "CC0", "https://commons.wikimedia.org/wiki/File:Cataratas_do_Igua%C3%A7u_(2022).jpg"),
+        },
+        inverno: {
+            src: "/images/destinos/foz/cataratas.jpg",
+            alt: "Arco-íris sobre a Garganta do Diabo, vista do lado brasileiro",
+            credito: credito(
+                "Josep M. Gracia",
+                "CC BY-SA 4.0",
+                "https://commons.wikimedia.org/wiki/File:IG_-_Devil%27s_Throat_from_the_Brazilian_side_of_Iguazu_Falls,_2023.jpg"
+            ),
+            legenda: "Em dia de sol, o arco-íris aparece.",
+        },
+        essencial: [
+            { rotulo: "Melhor época", valor: "O ano todo; mais água no verão" },
+            { rotulo: "Dias ideais", valor: "3 a 4 noites" },
+            { rotulo: "Como chegar", valor: "Voo até Foz do Iguaçu (IGU)" },
+            { rotulo: "Lado argentino", valor: "RG (menos de 10 anos) ou passaporte" },
+        ],
+        introducao: [
+            "Foz do Iguaçu fica no oeste do Paraná, onde Brasil, Argentina e Paraguai se encontram. As Cataratas do Iguaçu, dentro de parques nacionais dos dois lados da fronteira, são o motivo da viagem: centenas de quedas no meio da Mata Atlântica, com a Garganta do Diabo no centro de tudo.",
+            "A gente sempre recomenda conhecer os dois lados. O brasileiro mostra a vista panorâmica; o argentino coloca você em cima e embaixo das quedas. Somando Itaipu, o Parque das Aves e o pôr do sol no Marco das Três Fronteiras, é uma viagem curta e cheia, ótima para famílias e casais.",
+        ],
+        epocas: [
+            {
+                periodo: "Dezembro a março",
+                titulo: "Verão",
+                texto: "Calor forte e úmido, chuvas frequentes e, em geral, as cataratas mais cheias. Janeiro concentra o movimento das férias.",
+            },
+            {
+                periodo: "Abril e maio",
+                titulo: "Outono",
+                texto: "O calor diminui, o movimento cai e ainda costuma haver bom volume de água. Uma das épocas mais agradáveis para caminhar pelas trilhas.",
+            },
+            {
+                periodo: "Junho a agosto",
+                titulo: "Inverno",
+                texto: "Época mais seca: dias amenos, noites frias e menos água nas quedas, que ficam mais desenhadas e com menos névoa. Julho tem férias escolares.",
+            },
+            {
+                periodo: "Setembro a novembro",
+                titulo: "Primavera",
+                texto: "As chuvas voltam, a temperatura sobe e o volume das quedas tende a crescer. Bom equilíbrio entre clima e paisagem.",
+            },
+        ],
+        experiencias: [
+            {
+                nome: "Trilha das Cataratas",
+                texto: "No lado brasileiro, cerca de 1,5 km de caminhada entre mirantes, com a vista panorâmica das quedas do lado argentino. Tem escadas, e o ônibus do parque leva até o início.",
+                foto: {
+                    src: "/images/destinos/foz/trilha.jpg",
+                    alt: "Sequência de quedas d'água no meio da mata, com arco-íris",
+                    credito: credito("Jerzystrzelecki", "CC BY 3.0", "https://commons.wikimedia.org/wiki/File:Iguazu_Falls(js)10.jpg"),
+                },
+            },
+            {
+                nome: "Passarela e Espaço Naipi",
+                texto: "O fim da trilha: uma passarela sobre o rio, de frente para a Garganta do Diabo, e o elevador panorâmico do Espaço Naipi. Prepare-se para sair molhado.",
+                foto: {
+                    src: "/images/destinos/foz/passarela.jpg",
+                    alt: "Passarela sobre o rio Iguaçu diante das quedas, no lado brasileiro",
+                    credito: credito("Bruno Lenharo", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Passarela_das_cataratas_do_Igua%C3%A7u.jpg"),
+                },
+            },
+            {
+                nome: "Garganta del Diablo, lado argentino",
+                texto: "No Parque Nacional Iguazú, o Tren Ecológico de la Selva leva até a passarela que termina em cima da Garganta del Diablo. Os circuitos Superior e Inferior completam o dia, por cima e por baixo das quedas.",
+                foto: {
+                    src: "/images/destinos/foz/garganta.jpg",
+                    alt: "Garganta del Diablo vista do mirante do lado argentino",
+                    credito: credito(
+                        "Luca Galuzzi",
+                        "CC BY-SA 2.5",
+                        "https://commons.wikimedia.org/wiki/File:Garganta_del_Diablo_or_Devil_Throat_Iguazu_Falls_Argentina_Luca_Galuzzi_2005.JPG"
+                    ),
+                },
+            },
+            {
+                nome: "Usina de Itaipu",
+                texto: "A hidrelétrica binacional no rio Paraná, entre Brasil e Paraguai. Há a visita panorâmica, o circuito especial por dentro da usina e, em alguns dias, a barragem iluminada à noite.",
+                foto: {
+                    src: "/images/destinos/foz/itaipu.jpg",
+                    alt: "Barragem da usina de Itaipu com o vertedouro",
+                    credito: credito(
+                        "Deni Williams",
+                        "CC BY 2.0",
+                        "https://commons.wikimedia.org/wiki/File:Usina_Hidroel%C3%A9trica_Itaipu_Binacional_-_Itaipu_Dam_(17173517650).jpg"
+                    ),
+                },
+            },
+            {
+                nome: "Parque das Aves",
+                texto: "Ao lado da entrada do Parque Nacional do Iguaçu, viveiros dentro da mata para ver de perto tucanos, araras e outras aves da Mata Atlântica. As crianças adoram.",
+                foto: {
+                    src: "/images/destinos/foz/parque-das-aves.jpg",
+                    alt: "Tucano-toco pousado em um tronco, no Parque das Aves",
+                    credito: credito("Julio Cesar R. Lopes", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Tucano_parque_das_aves_2015.jpg"),
+                },
+            },
+            {
+                nome: "Marco das Três Fronteiras",
+                texto: "O ponto onde os rios Iguaçu e Paraná se encontram e dividem Brasil, Argentina e Paraguai. Vá no fim da tarde: o pôr do sol é o programa, e o espaço tem gastronomia e espetáculo.",
+                foto: {
+                    src: "/images/destinos/foz/tres-fronteiras.jpg",
+                    alt: "Encontro dos rios Iguaçu e Paraná na Tríplice Fronteira",
+                    credito: credito(
+                        "Phillip Capper",
+                        "CC BY 2.0",
+                        "https://commons.wikimedia.org/wiki/File:Confluence_of_the_Iguazu_and_Parana_rivers,_Puerto_Iguazu,_Misiones,_Argentina,_6th._Jan._2011_-_Flickr_-_PhillipC.jpg"
+                    ),
+                },
+            },
+        ],
+        roteiro: {
+            titulo: "Roteiro-exemplo de 4 noites",
+            nota: "Cada roteiro da Cantos é montado sob medida. Este é só um ponto de partida.",
+            dias: [
+                { dia: "Dia 1", texto: "Chegada, traslado ao hotel e pôr do sol no Marco das Três Fronteiras." },
+                { dia: "Dia 2", texto: "Lado brasileiro: Trilha das Cataratas, passarela e Espaço Naipi. À tarde, o Parque das Aves, logo ao lado." },
+                { dia: "Dia 3", texto: "Lado argentino: trem até a Garganta del Diablo e os circuitos Superior e Inferior." },
+                { dia: "Dia 4", texto: "Itaipu pela manhã e tarde livre, com compras em Ciudad del Este, no Paraguai, para quem quiser." },
+                { dia: "Dia 5", texto: "Traslado ao aeroporto e volta para casa." },
+            ],
+        },
+        faq: [
+            {
+                p: "Qual a melhor época para ir a Foz do Iguaçu?",
+                r: "As cataratas valem o ano todo. No verão e na primavera, com mais chuva, costumam estar mais cheias; no inverno o clima é seco e ameno, com menos água. O volume depende das chuvas na bacia do rio e varia bastante de um ano para o outro.",
+            },
+            {
+                p: "Quantos dias ficar em Foz do Iguaçu?",
+                r: "De 3 a 4 noites dá para conhecer os dois lados das cataratas, Itaipu, o Parque das Aves e o Marco das Três Fronteiras sem correria.",
+            },
+            {
+                p: "Qual documento preciso para visitar o lado argentino?",
+                r: "RG em bom estado e emitido há menos de 10 anos, ou passaporte válido. A CNH não é aceita para cruzar a fronteira. As regras podem mudar, então confirme nos canais oficiais antes de viajar.",
+            },
+            {
+                p: "Como chegar a Foz do Iguaçu saindo de Porto Alegre?",
+                r: "De avião, até o Aeroporto Internacional de Foz do Iguaçu (IGU), com voo direto ou com conexão, conforme a época e a companhia. O aeroporto fica no caminho das Cataratas, perto do Parque Nacional.",
+            },
+            {
+                p: "Vale a pena conhecer os dois lados das Cataratas?",
+                r: "Sim, e a gente sempre recomenda. O lado brasileiro mostra a vista panorâmica, em meio dia de visita. O lado argentino pede um dia inteiro e leva você para perto das quedas, até a Garganta del Diablo.",
+            },
+            {
+                p: "Quanto custa uma viagem para Foz do Iguaçu?",
+                r: "Depende da época, do hotel e dos passeios. Como cada roteiro é montado sob medida, a Curadoria Cantos do Mundo envia uma proposta personalizada pelo WhatsApp.",
+            },
+        ],
+    },
 ];
 
 export function getDestino(slug) {
